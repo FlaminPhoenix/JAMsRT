@@ -1,3 +1,5 @@
+local bricklayer_active = false
+
 SMODS.Joker {
     key = 'bricklayer',
     loc_txt = {
@@ -10,34 +12,50 @@ SMODS.Joker {
         }
     },
     config = { extra = {} },
-    atlas = 'placeholders', -- Uses your defined atlas
-    pos = { x = 3, y = 0 }, -- Adjust X/Y based on your spritesheet layout
-    rarity = 3, -- 1 = Common, 2 = Uncommon, 3 = Rare, 4 = Legendary
+    atlas = 'placeholders',
+    pos = { x = 2, y = 0 },
+    rarity = 3,
     cost = 9,
     unlocked = true,
     discovered = true,
-    
-    -- This function runs when the Joker is added to your run
+
     add_to_deck = function(self, card, from_debuff)
-        -- Set a global flag or deck flag indicating Bricklayer is active
-        -- We attach this to the G.playing_cards table or a global mod variable
+        -- Set global flag
         if not G.GAME.mod_flags then G.GAME.mod_flags = {} end
         G.GAME.mod_flags.bricklayer_active = true
         
-        -- Optional: Immediately upgrade existing cards in deck if desired
-        -- This is complex and usually handled by a separate 'update' loop
+        -- Apply Override ONLY if not already applied
+        if not bricklayer_active then
+            bricklayer_active = true
+            
+            -- Store original function
+            local original_set_edition = Card.set_edition
+            
+            -- Override
+            Card.set_edition = function(self_card, edition, skip_save)
+                if G.GAME and G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active then
+                    if not self_card.ability.editions_list then 
+                        self_card.ability.editions_list = {} 
+                    end
+                    table.insert(self_card.ability.editions_list, edition)
+                    -- You must manually trigger visual updates here if needed
+                    return true
+                else
+                    return original_set_edition(self_card, edition, skip_save)
+                end
+            end
+        end
     end,
 
-    -- This function runs when the Joker is removed (sold/destroyed)
     remove_from_deck = function(self, card, from_debuff)
-        if G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active then
+        -- Optional: Disable flag if no other Bricklayers exist
+        -- Note: Restoring the original function is difficult here without complex tracking
+        if G.GAME.mod_flags then
             G.GAME.mod_flags.bricklayer_active = false
         end
     end,
     
     calculate = function(self, card, context)
-        -- Passive Joker, no calculation needed during scoring usually
-        -- Unless you want it to trigger an effect when a multi-sealed card scores
         return {}
     end
 }
