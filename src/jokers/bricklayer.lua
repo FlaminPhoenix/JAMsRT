@@ -1,4 +1,4 @@
-local bricklayer_active = false
+local bricklayer_override_applied = false
 
 SMODS.Joker {
     key = 'bricklayer',
@@ -8,7 +8,8 @@ SMODS.Joker {
             'Playing cards in your deck',
             'can hold {C:attention}multiple{}',
             '{C:attention}Enhancements{}, {C:attention}Seals{},',
-            'and {C:attention}Editions{}.'
+            'and {C:attention}Editions{}.',
+            '{C:inactive}(Effects do not stack)'
         }
     },
     config = { extra = {} },
@@ -20,79 +21,91 @@ SMODS.Joker {
     discovered = true,
 
     add_to_deck = function(self, card, from_debuff)
-    if not G.GAME.mod_flags then G.GAME.mod_flags = {} end
-    G.GAME.mod_flags.bricklayer_active = true
+        -- 1. Set Global Flag
+        if not G.GAME.mod_flags then G.GAME.mod_flags = {} end
+        G.GAME.mod_flags.bricklayer_active = true
 
-    if not bricklayer_active then
-        bricklayer_active = true
-        
-        -- 1. Store Original
-        local original_set_edition = Card.set_edition
-        
-        -- 2. Override Set_Edition
-        Card.set_edition = function(self_card, edition, immediate, silent, delay)
-            if G.GAME.mod_flags.bricklayer_active and self_card.config.card_type == 'Standard' then
-                if not self_card.ability.editions_list then 
-                    self_card.ability.editions_list = {} 
-                end
-                -- Add to your list
-                table.insert(self_card.ability.editions_list, edition)
-                
-                -- CRITICAL: Also set the base 'edition' var so the game thinks it has one
-                -- This prevents the game from rejecting the card or looking broken
-                if not self_card.ability.edition then
-                    self_card.ability.edition = edition 
-                end
-                
-                if immediate then
-                    -- Trigger visual update manually if needed
-                    self_card:juice_up()
-                end
-                return true
-            else
-                return original_set_edition(self_card, edition, immediate, silent, delay)
-            end
-        end
-    end
-end,
-
-
-calculate = function(self, card, context)
-    -- Only trigger during the scoring of individual playing cards
-    if context.individual and context.cardarea == G.play and context.other_card then
-        local scored_card = context.other_card
-        
-        -- Check if the card has your custom list and more than 1 edition
-        if scored_card.ability.editions_list and #scored_card.ability.editions_list > 1 then
-            local extra_mult = 0
-            local extra_chips = 0
-            local x_mult = 1
+        -- 2. Apply Overrides ONLY once per run
+        if not bricklayer_override_applied then
+            bricklayer_override_applied = true
             
-            -- Loop through ALL editions in your list
-            for i, ed_key in ipairs(scored_card.ability.editions_list) do
-                -- Skip the first one (base game handles the primary edition)
-                if i > 1 then 
-                    if ed_key == 'e_foil' then extra_chips = extra_chips + 50
-                    elseif ed_key == 'e_holo' then extra_mult = extra_mult + 10
-                    elseif ed_key == 'e_polychrome' then x_mult = x_mult * 1.5
-                    elseif ed_key == 'e_negative' then x_mult = x_mult * 2.0 -- Example
+            -- Store Originals
+            local original_set_edition = Card.set_edition
+            local original_set_seal = Card.set_seal
+            local original_set_ability = Card.set_ability
+
+            -- === OVERRIDE 1: EDITIONS ===
+            Card.set_edition = function(self_card, edition, immediate, silent, delay)
+                if G.GAME.mod_flags.bricklayer_active and self_card.config.card_type == 'Standard' then
+                    if not self_card.ability.editions_list then self_card.ability.editions_list = {} end
+                    -- Add to list
+                    table.insert(self_card.ability.editions_list, edition)
+                    
+                    -- Set the base edition ONLY if it doesn't have one yet
+                    -- This ensures the game uses the FIRST edition for effects/visuals
+                    if not self_card.ability.edition then
+                        self_card.ability.edition = edition
+                    end
+                    
+                    if immediate then self_card:juice_up() end
+                    return true
+                else
+                    return original_set_edition(self_card, edition, immediate, silent, delay)
+                end
+            end
+
+            -- === OVERRIDE 2: SEALS ===
+            Card.set_seal = function(self_card, seal, immediate)
+                if G.GAME.mod_flags.bricklayer_active and self_card.config.card_type == 'Standard' then
+                    if not self_card.ability.seals_list then self_card.ability.seals_list = {} end
+                    -- Add to list
+                    table.insert(self_card.ability.seals_list, seal)
+
+                    -- Set the base seal ONLY if it doesn't have one yet
+                    if not self_card.ability.seal then
+                        self_card.ability.seal = seal
+                    end
+
+                    if immediate then self_card:juice_up() end
+                    return true
+                else
+                    return original_set_seal(self_card, seal, immediate)
+                end
+            end
+
+            -- === OVERRIDE 3: ENHANCEMENTS ===
+            Card.set_ability = function(self_card, ability, immediate, silent)
+                if G.GAME.mod_flags.bricklayer_active and self_card.config.card_type == 'Standard' then
+                    if ability and (ability.name or next(ability)) then
+                        if not self_card.ability.enhancements_list then self_card.ability.enhancements_list = {} end
+                        -- Add to list
+                        table.insert(self_card.ability.enhancements_list, ability)
+
+                        -- Set the base ability ONLY if it doesn't have one yet
+                        if not self_card.ability.name then
+                            self_card.ability.name = ability.name
+                            self_card.ability.extra = ability.extra
+                            -- Trigger visual update for enhancement
+                            if self_card.set_ability_sprites then self_card:set_ability_sprites() end
+                        end
+
+                        if immediate then self_card:juice_up() end
+                        return true
                     end
                 end
-            end
-            
-            -- ONLY return if there are actual bonuses calculated
-            if extra_chips > 0 or extra_mult > 0 or x_mult > 1 then
-                return {
-                    message = "Bricklayer!", -- REQUIRED: Fixes the 'no repetitions' error
-                    chips = extra_chips,
-                    mult = extra_mult,
-                    Xmult = x_mult,
-                    colour = G.C.RED
-                }
+                return original_set_ability(self_card, ability, immediate, silent)
             end
         end
-    end
-    return {}
-end
+    end,
 
+    remove_from_deck = function(self, card, from_debuff)
+        if G.GAME.mod_flags then
+            G.GAME.mod_flags.bricklayer_active = false
+        end
+    end,
+    
+    calculate = function(self, card, context)
+        -- No calculation needed since effects don't stack
+        return {}
+    end
 }
