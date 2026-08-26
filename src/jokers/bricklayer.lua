@@ -61,6 +61,8 @@ calculate = function(self, card, context)
     -- Only run during scoring of a playing card
     if context.individual and context.cardarea == G.play and context.other_card then
         local scored_card = context.other_card
+        
+        -- Check if the card has your custom list and more than 1 edition
         if scored_card.ability.editions_list and #scored_card.ability.editions_list > 1 then
             local extra_mult = 0
             local extra_chips = 0
@@ -68,7 +70,7 @@ calculate = function(self, card, context)
             
             -- Loop through ALL editions in your list
             for i, ed_key in ipairs(scored_card.ability.editions_list) do
-                -- Skip the first one (base game handles it) or handle all if you disabled base
+                -- Skip the first one (base game handles it)
                 if i > 1 then 
                     if ed_key == 'e_foil' then extra_chips = extra_chips + 50
                     elseif ed_key == 'e_holo' then extra_mult = extra_mult + 10
@@ -77,9 +79,10 @@ calculate = function(self, card, context)
                 end
             end
             
+            -- ONLY return if there are actual bonuses
             if extra_chips > 0 or extra_mult > 0 or x_mult > 1 then
                 return {
-                    message = "Bricklayer!",
+                    message = "Bricklayer!", -- THIS IS REQUIRED to fix the error
                     chips = extra_chips,
                     mult = extra_mult,
                     Xmult = x_mult,
@@ -90,7 +93,5 @@ calculate = function(self, card, context)
     end
     return {}
 end
-
-
 
 }
