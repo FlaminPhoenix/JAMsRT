@@ -20,42 +20,39 @@ SMODS.Joker {
     discovered = true,
 
     add_to_deck = function(self, card, from_debuff)
-        -- Set global flag
-        if not G.GAME.mod_flags then G.GAME.mod_flags = {} end
-        G.GAME.mod_flags.bricklayer_active = true
+    if not G.GAME.mod_flags then G.GAME.mod_flags = {} end
+    G.GAME.mod_flags.bricklayer_active = true
+
+    if not bricklayer_active then
+        bricklayer_active = true
         
-        -- Apply Override ONLY if not already applied
-        if not bricklayer_active then
-            bricklayer_active = true
-            
-            -- Store original function
-            local original_set_edition = Card.set_edition
-            
-            -- Override
-            Card.set_edition = function(self_card, edition, skip_save)
-                if G.GAME and G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active then
-                    if not self_card.ability.editions_list then 
-                        self_card.ability.editions_list = {} 
-                    end
-                    table.insert(self_card.ability.editions_list, edition)
-                    -- You must manually trigger visual updates here if needed
-                    return true
-                else
-                    return original_set_edition(self_card, edition, skip_save)
+        -- 1. Store Original
+        local original_set_edition = Card.set_edition
+        
+        -- 2. Override Set_Edition
+        Card.set_edition = function(self_card, edition, immediate, silent, delay)
+            if G.GAME.mod_flags.bricklayer_active and self_card.config.card_type == 'Standard' then
+                if not self_card.ability.editions_list then 
+                    self_card.ability.editions_list = {} 
                 end
+                -- Add to your list
+                table.insert(self_card.ability.editions_list, edition)
+                
+                -- CRITICAL: Also set the base 'edition' var so the game thinks it has one
+                -- This prevents the game from rejecting the card or looking broken
+                if not self_card.ability.edition then
+                    self_card.ability.edition = edition 
+                end
+                
+                if immediate then
+                    -- Trigger visual update manually if needed
+                    self_card:juice_up()
+                end
+                return true
+            else
+                return original_set_edition(self_card, edition, immediate, silent, delay)
             end
         end
-    end,
-
-    remove_from_deck = function(self, card, from_debuff)
-        -- Optional: Disable flag if no other Bricklayers exist
-        -- Note: Restoring the original function is difficult here without complex tracking
-        if G.GAME.mod_flags then
-            G.GAME.mod_flags.bricklayer_active = false
-        end
-    end,
-    
-    calculate = function(self, card, context)
-        return {}
     end
+end,
 }
