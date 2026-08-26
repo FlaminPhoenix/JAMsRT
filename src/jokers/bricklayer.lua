@@ -58,7 +58,7 @@ end,
 
 
 calculate = function(self, card, context)
-    -- Only run during scoring of a playing card
+    -- Only trigger during the scoring of individual playing cards
     if context.individual and context.cardarea == G.play and context.other_card then
         local scored_card = context.other_card
         
@@ -70,19 +70,20 @@ calculate = function(self, card, context)
             
             -- Loop through ALL editions in your list
             for i, ed_key in ipairs(scored_card.ability.editions_list) do
-                -- Skip the first one (base game handles it)
+                -- Skip the first one (base game handles the primary edition)
                 if i > 1 then 
                     if ed_key == 'e_foil' then extra_chips = extra_chips + 50
                     elseif ed_key == 'e_holo' then extra_mult = extra_mult + 10
                     elseif ed_key == 'e_polychrome' then x_mult = x_mult * 1.5
+                    elseif ed_key == 'e_negative' then x_mult = x_mult * 2.0 -- Example
                     end
                 end
             end
             
-            -- ONLY return if there are actual bonuses
+            -- ONLY return if there are actual bonuses calculated
             if extra_chips > 0 or extra_mult > 0 or x_mult > 1 then
                 return {
-                    message = "Bricklayer!", -- THIS IS REQUIRED to fix the error
+                    message = "Bricklayer!", -- REQUIRED: Fixes the 'no repetitions' error
                     chips = extra_chips,
                     mult = extra_mult,
                     Xmult = x_mult,
