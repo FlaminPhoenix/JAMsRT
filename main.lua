@@ -16,7 +16,7 @@ end
 
 --region Assert
 
-assert(SMODS.load_file("consumables/consumables.lua"))()
+--assert(SMODS.load_file("consumables/consumables.lua"))()
 assert(SMODS.load_file("enhancements/enhancements.lua"))()
 assert(SMODS.load_file("hooks/hooks.lua"))()
 assert(SMODS.load_file("icon.lua"))()
