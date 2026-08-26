@@ -1,156 +1,43 @@
-
-local function init_multi_data(card)
-    if not card.multi_mods then
-        card.multi_mods = {
-            editions = {},
-            seals = {},
-            enhancements = {}
-        }
-    end
-end
-
-
-
-SMODS.joker {
+SMODS.Joker {
     key = 'bricklayer',
-    atlas = 'placeholders',
-    pos = {
-        x = 2,
-        y = 0
-    },
-    config = {
-        extra = {
-            chips = 0
+    loc_txt = {
+        name = 'Bricklayer',
+        text = {
+            'Playing cards in your deck',
+            'can hold {C:attention}multiple{}',
+            '{C:attention}Enhancements{}, {C:attention}Seals{},',
+            'and {C:attention}Editions{}.'
         }
     },
-    rarity = 3,
+    config = { extra = {} },
+    atlas = 'placeholders', -- Uses your defined atlas
+    pos = { x = 3, y = 0 }, -- Adjust X/Y based on your spritesheet layout
+    rarity = 3, -- 1 = Common, 2 = Uncommon, 3 = Rare, 4 = Legendary
     cost = 9,
-    loc_vars = function(self, info_queue, card)
-        return {
-            vars = {card.ability.extra.chips}
-        }
+    unlocked = true,
+    discovered = true,
+    
+    -- This function runs when the Joker is added to your run
+    add_to_deck = function(self, card, from_debuff)
+        -- Set a global flag or deck flag indicating Bricklayer is active
+        -- We attach this to the G.playing_cards table or a global mod variable
+        if not G.GAME.mod_flags then G.GAME.mod_flags = {} end
+        G.GAME.mod_flags.bricklayer_active = true
+        
+        -- Optional: Immediately upgrade existing cards in deck if desired
+        -- This is complex and usually handled by a separate 'update' loop
     end,
 
-    calculate = function(self, card, context)
-        if context.before and context.cardarea == G.play then
-            for _, played_card in ipairs(context.scoring_hand) do
-                init_multi_data(played_card)
-                played_card.allow_multi_mods = true
-            end
+    -- This function runs when the Joker is removed (sold/destroyed)
+    remove_from_deck = function(self, card, from_debuff)
+        if G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active then
+            G.GAME.mod_flags.bricklayer_active = false
         end
+    end,
+    
+    calculate = function(self, card, context)
+        -- Passive Joker, no calculation needed during scoring usually
+        -- Unless you want it to trigger an effect when a multi-sealed card scores
+        return {}
     end
 }
-
-local original_set_edition = Card.set_edition
-Card.set_edition = function(self, edition, immediate, silent, delay)
-    if self.allow_multi_mods and self.multi_mods then
-        if edition == nil then
-            self.multi_mods.editions = {}
-            self.edition = nil
-            return
-        end
-
-        local key = type(edition) == "table" and edition.key or edition
-        if not G.P_EDITIONS[key] then 
-            return original_set_edition(self, edition, immediate, silent, delay) 
-        end
-
-        local exists = false
-        for _, ed in ipairs(self.multi_mods.editions) do
-            if ed == key then exists = true; break end
-        end
-        
-        if not exists then
-            table.insert(self.multi_mods.editions, key)
-            if not silent then self:juice_up(0.3, 0.5) end
-            return
-        end
-        return
-    end
-
-    return original_set_edition(self, edition, immediate, silent, delay)
-end
-
-local original_set_seal = Card.set_seal
-Card.set_seal = function(self, seal, skip_check)
-    if self.allow_multi_mods and self.multi_mods then
-        if seal == nil then
-            self.multi_mods.seals = {}
-            self.seal = nil
-            return
-        end
-        
-        local key = type(seal) == "table" and seal.key or seal
-        if not G.P_SEALS[key] then 
-            return original_set_seal(self, seal, skip_check) 
-        end
-        
-        local exists = false
-        for _, s in ipairs(self.multi_mods.seals) do
-            if s == key then exists = true; break end
-        end
-        
-        if not exists then
-            table.insert(self.multi_mods.seals, key)
-            self:juice_up(0.3, 0.5)
-            return
-        end
-        return
-    end
-    return original_set_seal(self, seal, skip_check)
-end
-
-local original_set_ability = Card.set_ability
-Card.set_ability = function(self, center, initial, delay_sprites)
-    if self.allow_multi_mods and self.multi_mods then
-        if center == nil then
-            self.multi_mods.enhancements = {}
-            self.ability = nil
-            return
-        end
-        
-        local key = type(center) == "table" and center.key or center
-        if not G.P_CENTERS[key] then 
-            return original_set_ability(self, center, initial, delay_sprites) 
-        end
-        
-        local exists = false
-        for _, e in ipairs(self.multi_mods.enhancements) do
-            if e == key then exists = true; break end
-        end
-        
-        if not exists then
-            table.insert(self.multi_mods.enhancements, key)
-            self:juice_up(0.3, 0.5)
-            return
-        end
-        return
-    end
-    return original_set_ability(self, center, initial, delay_sprites)
-end
-
-local original_draw = Card.draw
-Card.draw = function(self, layer, opacity)
-    original_draw(self, layer, opacity)
-
-    if self.allow_multi_mods and self.multi_mods then
-
-        if #self.multi_mods.editions > 0 then
-            for _, ed_key in ipairs(self.multi_mods.editions) do
-                local ed_config = G.P_EDITIONS[ed_key]
-                if ed_config and ed_config.draw then
-                    ed_config.draw(self, layer, opacity)
-                end
-            end
-        end
-
-        if #self.multi_mods.seals > 0 then
-            for _, seal_key in ipairs(self.multi_mods.seals) do
-                local seal_config = G.P_SEALS[seal_key]
-                if seal_config and seal_config.draw then
-                    seal_config.draw(self, layer, opacity)
-                end
-            end
-        end
-    end
-end
