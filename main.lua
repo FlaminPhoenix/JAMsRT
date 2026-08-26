@@ -13,3 +13,12 @@ for _, file in ipairs(jokers_src) do
     assert(SMODS.load_file("src/jokers/" .. file))()
 end
 --#endregion
+
+--region Assert
+
+assert(SMODS.load_file("consumables/consumables.lua"))()
+assert(SMODS.load_file("enhancements/enhancements.lua"))()
+assert(SMODS.load_file("hooks/hooks.lua"))()
+assert(SMODS.load_file("icon.lua"))()
+
+--#endregion
