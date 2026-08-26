@@ -55,4 +55,42 @@ SMODS.Joker {
         end
     end
 end,
+
+
+calculate = function(self, card, context)
+    -- Only run during scoring of a playing card
+    if context.individual and context.cardarea == G.play and context.other_card then
+        local scored_card = context.other_card
+        if scored_card.ability.editions_list and #scored_card.ability.editions_list > 1 then
+            local extra_mult = 0
+            local extra_chips = 0
+            local x_mult = 1
+            
+            -- Loop through ALL editions in your list
+            for i, ed_key in ipairs(scored_card.ability.editions_list) do
+                -- Skip the first one (base game handles it) or handle all if you disabled base
+                if i > 1 then 
+                    if ed_key == 'e_foil' then extra_chips = extra_chips + 50
+                    elseif ed_key == 'e_holo' then extra_mult = extra_mult + 10
+                    elseif ed_key == 'e_polychrome' then x_mult = x_mult * 1.5
+                    end
+                end
+            end
+            
+            if extra_chips > 0 or extra_mult > 0 or x_mult > 1 then
+                return {
+                    message = "Bricklayer!",
+                    chips = extra_chips,
+                    mult = extra_mult,
+                    Xmult = x_mult,
+                    colour = G.C.RED
+                }
+            end
+        end
+    end
+    return {}
+end
+
+
+
 }
