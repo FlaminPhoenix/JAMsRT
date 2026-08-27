@@ -1,9 +1,9 @@
 {
     "id": "JaMsRandomThoughts",
-    "name": "FlaminPhoenix & DestrucshuNJ's Random Thoughts",
+    "name": "JAMs Random Thoughts",
     "author": ["FlaminPhoenix"],
     "description": "A mod for our random thoughts because why not '_'",
     "prefix": "JAMRT",
     "main_file": "main.lua",
-    "version": "0.0.1"
+    "version": "0.1.0"
 }
