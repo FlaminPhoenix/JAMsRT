@@ -14,7 +14,7 @@ for _, file in ipairs(jokers_src) do
 end
 --#endregion
 
---region Assert
+--#region Assert
 
 
 assert(SMODS.load_file("src/consumables/consumables.lua"))()

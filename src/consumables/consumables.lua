@@ -65,7 +65,11 @@ SMODS.Consumable:take_ownership('heirophant',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
@@ -160,7 +164,11 @@ SMODS.Consumable:take_ownership('empress',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
@@ -255,7 +263,11 @@ SMODS.Consumable:take_ownership('lovers',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
@@ -350,7 +362,11 @@ SMODS.Consumable:take_ownership('justice',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
@@ -445,7 +461,11 @@ SMODS.Consumable:take_ownership('chariot',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
@@ -540,7 +560,11 @@ SMODS.Consumable:take_ownership('tower',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
@@ -635,7 +659,11 @@ SMODS.Consumable:take_ownership('devil',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
@@ -730,7 +758,11 @@ SMODS.Consumable:take_ownership('magician',
                     trigger = 'after',
                     delay = 0.1,
                     func = function()
-                        G.hand.highlighted[i]:set_ability(enh_id)
+                        G.hand.highlighted[i]:set_ability(
+                            G.GAME.mod_flags and G.GAME.mod_flags.bricklayer_active
+                                and enh_id
+                                or card.ability.mod_conv
+                        )
                         return true
                     end
                 }))
