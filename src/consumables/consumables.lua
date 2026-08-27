@@ -15,7 +15,7 @@ SMODS.Consumable:take_ownership('heirophant',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -45,11 +45,11 @@ SMODS.Consumable:take_ownership('heirophant',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
@@ -110,7 +110,7 @@ SMODS.Consumable:take_ownership('empress',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -140,11 +140,11 @@ SMODS.Consumable:take_ownership('empress',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
@@ -205,7 +205,7 @@ SMODS.Consumable:take_ownership('lovers',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -235,11 +235,11 @@ SMODS.Consumable:take_ownership('lovers',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
@@ -300,7 +300,7 @@ SMODS.Consumable:take_ownership('justice',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -330,11 +330,11 @@ SMODS.Consumable:take_ownership('justice',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
@@ -395,7 +395,7 @@ SMODS.Consumable:take_ownership('chariot',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -425,11 +425,11 @@ SMODS.Consumable:take_ownership('chariot',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
@@ -490,7 +490,7 @@ SMODS.Consumable:take_ownership('tower',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -520,11 +520,11 @@ SMODS.Consumable:take_ownership('tower',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
@@ -585,7 +585,7 @@ SMODS.Consumable:take_ownership('devil',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -615,11 +615,11 @@ SMODS.Consumable:take_ownership('devil',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
@@ -680,7 +680,7 @@ SMODS.Consumable:take_ownership('magician',
                 plural[1] = "up to "
                 plural[2] = "s"
             end
-        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_recenh_") }, plural[1], plural[2] } }
+        return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv:gsub("m_","m_JAMRT_") }, plural[1], plural[2] } }
         end,
         use = function(self, card, area, copier)
             G.E_MANAGER:add_event(Event({
@@ -710,11 +710,11 @@ SMODS.Consumable:take_ownership('magician',
                 local card_id = G.hand.highlighted[i].config.center_key
                 local variant = card.ability.mod_conv:gsub("m_", "")
                 local temp = {}
-                local enh_id = "m_recenh_"
+                local enh_id = "m_JAMRT_"
                 for _, j in ipairs(card.ability.extra.enhancements) do
                     if (card_id:find(j) and j ~= variant) or (not card_id:find(j) and j == variant) then
                         temp[#temp + 1] = j
-                        if enh_id == "m_recenh_" then
+                        if enh_id == "m_JAMRT_" then
                             enh_id = enh_id .. j
                         else
                             enh_id = enh_id .. "X" .. j
