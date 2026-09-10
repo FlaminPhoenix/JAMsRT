@@ -1,0 +1,1829 @@
+return{
+    descriptions={
+        Tarot={
+            c_heirophant={
+                name="The Hierophant",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+            c_empress={
+                name="The Empress",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+            c_lovers={
+                name="The Lovers",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+            c_justice={
+                name="Justice",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+            c_chariot={
+                name="The Chariot",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+            c_tower={
+                name="The Tower",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+            c_devil={
+                name="The Devil",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+            c_magician={
+                name="The Magician",
+                text={"Adds the","{C:attention}#2#{} enhancement","to {C:attention}#1#{} selected card{}#4#{}"},
+            },
+        },
+        Enhanced={
+            m_JAMRT_lucky={name="Lucky",
+                text={}
+            },
+            m_JAMRT_gold={
+                name="Gold",
+                text={}
+            },
+            m_JAMRT_stone={
+                name="Stone",
+                text={}
+            },
+            m_JAMRT_steel={
+                name="Steel",
+                text={}
+            },
+            m_JAMRT_glass={
+                name="Glass",
+                text={}
+            },
+            m_JAMRT_wild={
+                name="Wild",
+                text={}
+            },
+            m_JAMRT_mult={
+                name="Mult",
+                text={}
+            },
+            m_JAMRT_bonus={
+                name="Bonus",
+                text={}
+            },
+
+            m_JAMRT_bonusXmult= {
+                name="Bonus Mult Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}}
+            },
+            m_JAMRT_bonusXwild= {
+                name="Bonus Wild Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}}
+            },
+            m_JAMRT_multXwild= {
+                name="Mult Wild Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}}
+            },
+            m_JAMRT_bonusXmultXwild= {
+                name="Bonus Mult Wild Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}}
+            },
+            m_JAMRT_bonusXglass= {
+                name="Bonus Glass Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}}
+            },
+            m_JAMRT_multXglass= {
+                name="Mult Glass Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}}
+            },
+            m_JAMRT_bonusXmultXglass= {
+                name="Bonus Mult Glass Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}}
+            },
+            m_JAMRT_wildXglass= {
+                name="Wild Glass Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}}
+            },
+            m_JAMRT_bonusXwildXglass= {
+                name="Bonus Wild Glass Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}}
+            },
+            m_JAMRT_multXwildXglass= {
+                name="Mult Wild Glass Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}}
+            },
+            m_JAMRT_bonusXmultXwildXglass= {
+                name="Bonus Mult Wild Glass Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}}
+            },
+            m_JAMRT_bonusXsteel= {
+                name="Bonus Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_multXsteel= {
+                name="Mult Steel Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXmultXsteel= {
+                name="Bonus Mult Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_wildXsteel= {
+                name="Wild Steel Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXwildXsteel= {
+                name="Bonus Wild Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_multXwildXsteel= {
+                name="Mult Wild Steel Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteel= {
+                name="Bonus Mult Wild Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_glassXsteel= {
+                name="Glass Steel Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXglassXsteel= {
+                name="Bonus Glass Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_multXglassXsteel= {
+                name="Mult Glass Steel Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteel= {
+                name="Bonus Mult Glass Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_wildXglassXsteel= {
+                name="Wild Glass Steel Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteel= {
+                name="Bonus Wild Glass Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_multXwildXglassXsteel= {
+                name="Mult Wild Glass Steel Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteel= {
+                name="Bonus Mult Wild Glass Steel Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}}
+            },
+            m_JAMRT_bonusXstone= {
+                name="Bonus Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_multXstone= {
+                name="Mult Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}}
+            },
+            m_JAMRT_bonusXmultXstone= {
+                name="Bonus Mult Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_wildXstone= {
+                name="Wild Stone Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{C:chips}+#1#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXwildXstone= {
+                name="Bonus Wild Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_multXwildXstone= {
+                name="Mult Wild Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXmultXwildXstone= {
+                name="Bonus Mult Wild Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_glassXstone= {
+                name="Glass Stone Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank or suit"}}
+            },
+            m_JAMRT_bonusXglassXstone= {
+                name="Bonus Glass Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_multXglassXstone= {
+                name="Mult Glass Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}}
+            },
+            m_JAMRT_bonusXmultXglassXstone= {
+                name="Bonus Mult Glass Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_wildXglassXstone= {
+                name="Wild Glass Stone Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXwildXglassXstone= {
+                name="Bonus Wild Glass Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_multXwildXglassXstone= {
+                name="Mult Wild Glass Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXstone= {
+                name="Bonus Mult Wild Glass Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_steelXstone= {
+                name="Steel Stone Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}}
+            },
+            m_JAMRT_bonusXsteelXstone= {
+                name="Bonus Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_multXsteelXstone= {
+                name="Mult Steel Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank or suit"}}
+            },
+            m_JAMRT_bonusXmultXsteelXstone= {
+                name="Bonus Mult Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_wildXsteelXstone= {
+                name="Wild Steel Stone Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXwildXsteelXstone= {
+                name="Bonus Wild Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_multXwildXsteelXstone= {
+                name="Mult Wild Steel Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteelXstone= {
+                name="Bonus Mult Wild Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_glassXsteelXstone= {
+                name="Glass Steel Stone Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}}
+            },
+            m_JAMRT_bonusXglassXsteelXstone= {
+                name="Bonus Glass Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_multXglassXsteelXstone= {
+                name="Mult Glass Steel Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank or suit"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteelXstone= {
+                name="Bonus Mult Glass Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}}
+            },
+            m_JAMRT_wildXglassXsteelXstone= {
+                name="Wild Glass Steel Stone Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteelXstone= {
+                name="Bonus Wild Glass Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_multXwildXglassXsteelXstone= {
+                name="Mult Wild Glass Steel Stone Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteelXstone= {
+                name="Bonus Mult Wild Glass Steel Stone Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}}
+            },
+            m_JAMRT_bonusXgold= {
+                name="Bonus Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXgold= {
+                name="Mult Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXgold= {
+                name="Bonus Mult Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXgold= {
+                name="Wild Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{C:money}$#1#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXgold= {
+                name="Bonus Wild Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXgold= {
+                name="Mult Wild Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXgold= {
+                name="Bonus Mult Wild Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_glassXgold= {
+                name="Glass Gold Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXglassXgold= {
+                name="Bonus Glass Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXglassXgold= {
+                name="Mult Glass Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXglassXgold= {
+                name="Bonus Mult Glass Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXglassXgold= {
+                name="Wild Glass Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXglassXgold= {
+                name="Bonus Wild Glass Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXglassXgold= {
+                name="Mult Wild Glass Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXgold= {
+                name="Bonus Mult Wild Glass Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_steelXgold= {
+                name="Steel Gold Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXsteelXgold= {
+                name="Bonus Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXsteelXgold= {
+                name="Mult Steel Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXsteelXgold= {
+                name="Bonus Mult Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXsteelXgold= {
+                name="Wild Steel Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXsteelXgold= {
+                name="Bonus Wild Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXsteelXgold= {
+                name="Mult Wild Steel Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteelXgold= {
+                name="Bonus Mult Wild Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_glassXsteelXgold= {
+                name="Glass Steel Gold Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXglassXsteelXgold= {
+                name="Bonus Glass Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXglassXsteelXgold= {
+                name="Mult Glass Steel Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteelXgold= {
+                name="Bonus Mult Glass Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXglassXsteelXgold= {
+                name="Wild Glass Steel Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteelXgold= {
+                name="Bonus Wild Glass Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXglassXsteelXgold= {
+                name="Mult Wild Glass Steel Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteelXgold= {
+                name="Bonus Mult Wild Glass Steel Gold Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_stoneXgold= {
+                name="Stone Gold Card",
+                text={{"{C:chips}+#1#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXstoneXgold= {
+                name="Bonus Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXstoneXgold= {
+                name="Mult Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXstoneXgold= {
+                name="Bonus Mult Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXstoneXgold= {
+                name="Wild Stone Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{C:chips}+#1#{} Chips", "no rank"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXstoneXgold= {
+                name="Bonus Wild Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXstoneXgold= {
+                name="Mult Wild Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXstoneXgold= {
+                name="Bonus Mult Wild Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_glassXstoneXgold= {
+                name="Glass Stone Gold Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXglassXstoneXgold= {
+                name="Bonus Glass Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXglassXstoneXgold= {
+                name="Mult Glass Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXglassXstoneXgold= {
+                name="Bonus Mult Glass Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXglassXstoneXgold= {
+                name="Wild Glass Stone Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXglassXstoneXgold= {
+                name="Bonus Wild Glass Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXglassXstoneXgold= {
+                name="Mult Wild Glass Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXstoneXgold= {
+                name="Bonus Mult Wild Glass Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_steelXstoneXgold= {
+                name="Steel Stone Gold Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXsteelXstoneXgold= {
+                name="Bonus Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXsteelXstoneXgold= {
+                name="Mult Steel Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXsteelXstoneXgold= {
+                name="Bonus Mult Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXsteelXstoneXgold= {
+                name="Wild Steel Stone Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXsteelXstoneXgold= {
+                name="Bonus Wild Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXsteelXstoneXgold= {
+                name="Mult Wild Steel Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteelXstoneXgold= {
+                name="Bonus Mult Wild Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_glassXsteelXstoneXgold= {
+                name="Glass Steel Stone Gold Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXglassXsteelXstoneXgold= {
+                name="Bonus Glass Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXglassXsteelXstoneXgold= {
+                name="Mult Glass Steel Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteelXstoneXgold= {
+                name="Bonus Mult Glass Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_wildXglassXsteelXstoneXgold= {
+                name="Wild Glass Steel Stone Gold Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteelXstoneXgold= {
+                name="Bonus Wild Glass Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_multXwildXglassXsteelXstoneXgold= {
+                name="Mult Wild Glass Steel Stone Gold Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteelXstoneXgold= {
+                name="Bonus Mult Wild Glass Steel Stone Gold Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}}
+            },
+            m_JAMRT_bonusXlucky= {
+                name="Bonus Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_multXlucky= {
+                name="Mult Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXmultXlucky= {
+                name="Bonus Mult Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_wildXlucky= {
+                name="Wild Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{C:green}#1# in #4#{} chance","for {C:mult}+#3#{} Mult","{C:green}#2# in #6#{} chance","to win {C:money}$#5#"}}
+            },
+            m_JAMRT_bonusXwildXlucky= {
+                name="Bonus Wild Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_multXwildXlucky= {
+                name="Mult Wild Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXmultXwildXlucky= {
+                name="Bonus Mult Wild Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_glassXlucky= {
+                name="Glass Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXglassXlucky= {
+                name="Bonus Glass Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_multXglassXlucky= {
+                name="Mult Glass Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXmultXglassXlucky= {
+                name="Bonus Mult Glass Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_wildXglassXlucky= {
+                name="Wild Glass Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXwildXglassXlucky= {
+                name="Bonus Wild Glass Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_multXwildXglassXlucky= {
+                name="Mult Wild Glass Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXlucky= {
+                name="Bonus Mult Wild Glass Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_steelXlucky= {
+                name="Steel Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXsteelXlucky= {
+                name="Bonus Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXsteelXlucky= {
+                name="Mult Steel Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXmultXsteelXlucky= {
+                name="Bonus Mult Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_wildXsteelXlucky= {
+                name="Wild Steel Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXwildXsteelXlucky= {
+                name="Bonus Wild Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXwildXsteelXlucky= {
+                name="Mult Wild Steel Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteelXlucky= {
+                name="Bonus Mult Wild Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_glassXsteelXlucky= {
+                name="Glass Steel Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXglassXsteelXlucky= {
+                name="Bonus Glass Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXglassXsteelXlucky= {
+                name="Mult Glass Steel Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteelXlucky= {
+                name="Bonus Mult Glass Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_wildXglassXsteelXlucky= {
+                name="Wild Glass Steel Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteelXlucky= {
+                name="Bonus Wild Glass Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXwildXglassXsteelXlucky= {
+                name="Mult Wild Glass Steel Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteelXlucky= {
+                name="Bonus Mult Wild Glass Steel Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_stoneXlucky= {
+                name="Stone Lucky Card",
+                text={{"{C:chips}+#1#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXstoneXlucky= {
+                name="Bonus Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_multXstoneXlucky= {
+                name="Mult Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXmultXstoneXlucky= {
+                name="Bonus Mult Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_wildXstoneXlucky= {
+                name="Wild Stone Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{C:chips}+#1#{} Chips", "no rank"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXwildXstoneXlucky= {
+                name="Bonus Wild Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_multXwildXstoneXlucky= {
+                name="Mult Wild Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXmultXwildXstoneXlucky= {
+                name="Bonus Mult Wild Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_glassXstoneXlucky= {
+                name="Glass Stone Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXglassXstoneXlucky= {
+                name="Bonus Glass Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_multXglassXstoneXlucky= {
+            name="Mult Glass Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXmultXglassXstoneXlucky= {
+                name="Bonus Mult Glass Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_wildXglassXstoneXlucky= {
+                name="Wild Glass Stone Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXwildXglassXstoneXlucky= {
+                name="Bonus Wild Glass Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_multXwildXglassXstoneXlucky= {
+                name="Mult Wild Glass Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXstoneXlucky= {
+                name="Bonus Mult Wild Glass Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_steelXstoneXlucky= {
+                name="Steel Stone Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXsteelXstoneXlucky= {
+                name="Bonus Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXsteelXstoneXlucky= {
+                name="Mult Steel Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXmultXsteelXstoneXlucky= {
+                name="Bonus Mult Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_wildXsteelXstoneXlucky= {
+                name="Wild Steel Stone Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXwildXsteelXstoneXlucky= {
+                name="Bonus Wild Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXwildXsteelXstoneXlucky= {
+                name="Mult Wild Steel Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteelXstoneXlucky= {
+                name="Bonus Mult Wild Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_glassXsteelXstoneXlucky= {
+                name="Glass Steel Stone Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXglassXsteelXstoneXlucky= {
+                name="Bonus Glass Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXglassXsteelXstoneXlucky= {
+                name="Mult Glass Steel Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank or suit"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteelXstoneXlucky= {
+                name="Bonus Mult Glass Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_wildXglassXsteelXstoneXlucky= {
+                name="Wild Glass Steel Stone Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteelXstoneXlucky= {
+                name="Bonus Wild Glass Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXwildXglassXsteelXstoneXlucky= {
+                name="Mult Wild Glass Steel Stone Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteelXstoneXlucky= {
+                name="Bonus Mult Wild Glass Steel Stone Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_goldXlucky= {
+                name="Gold Lucky Card",
+                text={{"{C:money}$#1#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXgoldXlucky= {
+                name="Bonus Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXgoldXlucky= {
+                name="Mult Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXmultXgoldXlucky= {
+                name="Bonus Mult Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_wildXgoldXlucky= {
+                name="Wild Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{C:money}$#1#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#2# in #5#{} chance","for {C:mult}+#4#{} Mult","{C:green}#3# in #7#{} chance","to win {C:money}$#6#"}}
+            },
+            m_JAMRT_bonusXwildXgoldXlucky= {
+                name="Bonus Wild Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXwildXgoldXlucky= {
+                name="Mult Wild Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXmultXwildXgoldXlucky= {
+                name="Bonus Mult Wild Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_glassXgoldXlucky= {
+                name="Glass Gold Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXglassXgoldXlucky= {
+                name="Bonus Glass Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXglassXgoldXlucky= {
+                name="Mult Glass Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXmultXglassXgoldXlucky= {
+                name="Bonus Mult Glass Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_wildXglassXgoldXlucky= {
+                name="Wild Glass Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXwildXglassXgoldXlucky= {
+                name="Bonus Wild Glass Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXwildXglassXgoldXlucky= {
+                name="Mult Wild Glass Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXgoldXlucky= {
+                name="Bonus Mult Wild Glass Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_steelXgoldXlucky= {
+                name="Steel Gold Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXsteelXgoldXlucky= {
+                name="Bonus Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_multXsteelXgoldXlucky= {
+                name="Mult Steel Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXmultXsteelXgoldXlucky= {
+                name="Bonus Mult Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_wildXsteelXgoldXlucky= {
+                name="Wild Steel Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXwildXsteelXgoldXlucky= {
+                name="Bonus Wild Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_multXwildXsteelXgoldXlucky= {
+                name="Mult Wild Steel Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteelXgoldXlucky= {
+                name="Bonus Mult Wild Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_glassXsteelXgoldXlucky= {
+                name="Glass Steel Gold Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXglassXsteelXgoldXlucky= {
+                name="Bonus Glass Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_multXglassXsteelXgoldXlucky= {
+                name="Mult Glass Steel Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteelXgoldXlucky= {
+                name="Bonus Mult Glass Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#8# in #11#{} chance","for {C:mult}+#10#{} Mult","{C:green}#9# in #13#{} chance","to win {C:money}$#12#"}}
+            },
+            m_JAMRT_wildXglassXsteelXgoldXlucky= {
+                name="Wild Glass Steel Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteelXgoldXlucky= {
+                name="Bonus Wild Glass Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_multXwildXglassXsteelXgoldXlucky= {
+                name="Mult Wild Glass Steel Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteelXgoldXlucky= {
+                name="Bonus Mult Wild Glass Steel Gold Lucky Card",
+                text={{"{C:chips}+#1#{} extra chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#8# in #11#{} chance","for {C:mult}+#10#{} Mult","{C:green}#9# in #13#{} chance","to win {C:money}$#12#"}}
+            },
+            m_JAMRT_stoneXgoldXlucky= {
+                name="Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXstoneXgoldXlucky= {
+                name="Bonus Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXstoneXgoldXlucky= {
+                name="Mult Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXmultXstoneXgoldXlucky= {
+                name="Bonus Mult Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_wildXstoneXgoldXlucky= {
+                name="Wild Stone Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{C:chips}+#1#{} Chips", "no rank"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_bonusXwildXstoneXgoldXlucky= {
+                name="Bonus Wild Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#2#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#3# in #6#{} chance","for {C:mult}+#5#{} Mult","{C:green}#4# in #8#{} chance","to win {C:money}$#7#"}}
+            },
+            m_JAMRT_multXwildXstoneXgoldXlucky= {
+                name="Mult Wild Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXmultXwildXstoneXgoldXlucky= {
+                name="Bonus Mult Wild Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_glassXstoneXgoldXlucky= {
+                name="Glass Stone Gold Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXglassXstoneXgoldXlucky= {
+                name="Bonus Glass Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXglassXstoneXgoldXlucky= {
+                name="Mult Glass Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXmultXglassXstoneXgoldXlucky= {
+                name="Bonus Mult Glass Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_wildXglassXstoneXgoldXlucky= {
+                name="Wild Glass Stone Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{C:chips}+#4#{} Chips", "no rank"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_bonusXwildXglassXstoneXgoldXlucky= {
+                name="Bonus Wild Glass Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#5#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#6# in #9#{} chance","for {C:mult}+#8#{} Mult","{C:green}#7# in #11#{} chance","to win {C:money}$#10#"}}
+            },
+            m_JAMRT_multXwildXglassXstoneXgoldXlucky= {
+                name="Mult Wild Glass Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXstoneXgoldXlucky= {
+                name="Bonus Mult Wild Glass Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_steelXstoneXgoldXlucky= {
+                name="Steel Stone Gold Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXsteelXstoneXgoldXlucky= {
+                name="Bonus Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_multXsteelXstoneXgoldXlucky= {
+                name="Mult Steel Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXmultXsteelXstoneXgoldXlucky= {
+                name="Bonus Mult Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_wildXsteelXstoneXgoldXlucky= {
+                name="Wild Steel Stone Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#2#{} Chips", "no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_bonusXwildXsteelXstoneXgoldXlucky= {
+                name="Bonus Wild Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#3#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#4# in #7#{} chance","for {C:mult}+#6#{} Mult","{C:green}#5# in #9#{} chance","to win {C:money}$#8#"}}
+            },
+            m_JAMRT_multXwildXsteelXstoneXgoldXlucky= {
+                name="Mult Wild Steel Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#3#{} Chips", "no rank"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_bonusXmultXwildXsteelXstoneXgoldXlucky= {
+                name="Bonus Mult Wild Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#4#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#5# in #8#{} chance","for {C:mult}+#7#{} Mult","{C:green}#6# in #10#{} chance","to win {C:money}$#9#"}}
+            },
+            m_JAMRT_glassXsteelXstoneXgoldXlucky= {
+                name="Glass Steel Stone Gold Lucky Card",
+                text={{"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXglassXsteelXstoneXgoldXlucky= {
+                name="Bonus Glass Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_multXglassXsteelXstoneXgoldXlucky= {
+                name="Mult Glass Steel Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank or suit"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#8# in #11#{} chance","for {C:mult}+#10#{} Mult","{C:green}#9# in #13#{} chance","to win {C:money}$#12#"}}
+            },
+            m_JAMRT_bonusXmultXglassXsteelXstoneXgoldXlucky= {
+                name="Bonus Mult Glass Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank or suit"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#8# in #11#{} chance","for {C:mult}+#10#{} Mult","{C:green}#9# in #13#{} chance","to win {C:money}$#12#"}}
+            },
+            m_JAMRT_wildXglassXsteelXstoneXgoldXlucky= {
+                name="Wild Glass Steel Stone Gold Lucky Card",
+                text={{"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#1#{} Mult","{C:green}#2# in #3#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#4#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#5#{} Chips", "no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_bonusXwildXglassXsteelXstoneXgoldXlucky= {
+                name="Bonus Wild Glass Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#6#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#7# in #10#{} chance","for {C:mult}+#9#{} Mult","{C:green}#8# in #12#{} chance","to win {C:money}$#11#"}}
+            },
+            m_JAMRT_multXwildXglassXsteelXstoneXgoldXlucky= {
+                name="Mult Wild Glass Steel Stone Gold Lucky Card",
+                text={{"{C:mult}+#1#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#2#{} Mult","{C:green}#3# in #4#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#5#{} Mult","while this card","stays in hand"}, 
+                        {"{C:chips}+#6#{} Chips", "no rank"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#8# in #11#{} chance","for {C:mult}+#10#{} Mult","{C:green}#9# in #13#{} chance","to win {C:money}$#12#"}}
+            },
+            m_JAMRT_bonusXmultXwildXglassXsteelXstoneXgoldXlucky= {
+                name="Bonus Mult Wild Glass Steel Stone Gold Lucky Card",
+                text={{"{C:chips}+#1#{} chips"}, 
+                        {"{C:mult}+#2#{} Mult"}, 
+                        {"Can be used","as any suit"}, 
+                        {"{X:mult,C:white}X#3#{} Mult","{C:green}#4# in #5#{} chance to","destroy card"}, 
+                        {"{X:mult,C:white}X#6#{} Mult","while this card","stays in hand"}, 
+                        {"no rank"}, 
+                        {"{C:money}$#7#{} if this","card is held in hand","at end of round"}, 
+                        {"{C:green}#8# in #11#{} chance","for {C:mult}+#10#{} Mult","{C:green}#9# in #13#{} chance","to win {C:money}$#12#"}}
+            }
+        }
+    }
+}
